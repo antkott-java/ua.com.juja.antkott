@@ -40,7 +40,8 @@ class Tester {
 
     }
 
-    @ParameterizedTest
+    //@ParameterizedTest(name = "run #{index} with [{arguments}]")
+    @ParameterizedTest(name = "\"{0}\" should be {1}")
     @CsvSource({
             "1, January",
             "2, February",
@@ -59,8 +60,8 @@ class Tester {
         assertEquals(expected, laboratoryWorkEntity.getMonthOfYear(passed), "check value " + passed);
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {0, 66, 100})
+    @ParameterizedTest(name = "run #{index} with [{arguments}]")
+    @ValueSource(ints = {0, 66, 9999999})
     void shouldReturn_EmptyString_When_PassIntegerOutOfMonthRange(int num) {
         assertEquals("", laboratoryWorkEntity.getMonthOfYear(num), "check value out of 1-12");
     }
