@@ -1,7 +1,7 @@
 public class LaboratoryWork {
 
-public int[] revertArray(int[] inputArray){
-    int[] outputArray = new int[inputArray.length];
+public Integer[] revertArray(Integer[] inputArray){
+    Integer[] outputArray = new Integer[inputArray.length];
     return outputArray;
 
 }

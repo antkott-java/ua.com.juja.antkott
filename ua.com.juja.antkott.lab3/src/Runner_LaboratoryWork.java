@@ -5,7 +5,6 @@ public class Runner_LaboratoryWork {
     public static void main(String[] args) {
         laboratoryWorkRunner = new LaboratoryWork();
         laboratoryWorkRunner.getMonthOfYear(1);
-
     }
 
 }

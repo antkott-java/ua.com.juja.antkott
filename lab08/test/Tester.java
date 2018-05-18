@@ -3,6 +3,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -11,8 +12,16 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class Tester {
 
     private static LaboratoryWork laboratoryWorkEntity;
-    private static int[] inputArray={1,2,3,4,5};
-    private static int[] outputArray={5,4,3,2,1};
+    private static int arraySize = ThreadLocalRandom.current().nextInt(5, 6 + 1);
+    private static Integer[] inputArray=new Integer [arraySize];
+    static {
+        for (int i = 0; i < arraySize - 1;i++) {
+            inputArray[i]=i;
+        }
+    }
+    private static Integer[] outputArray = Tester_ArrayReverser.reverse(inputArray);
+
+
 
     private static Stream<Arguments> stringAndIntProvider() {
         return Stream.of(Arguments.of(inputArray, outputArray));
@@ -27,8 +36,9 @@ class Tester {
 
     @ParameterizedTest(name = "\"{0}\" should be {1}")
     @MethodSource("stringAndIntProvider")
-    void shouldReturn_RevertedArray(int[] input, int[] expected) {
-        assertArrayEquals(expected, laboratoryWorkEntity.revertArray(input), "check value ");
+    void shouldReturn_RevertedArray(Integer[] input, Integer[] expected) {
+        //assertArrayEquals(expected, laboratoryWorkEntity.revertArray(input), "check value ");
+       // assertArrayEquals(expected, input, "check value ");
 
     }
 
