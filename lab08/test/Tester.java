@@ -3,6 +3,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
@@ -12,19 +13,23 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class Tester {
 
     private static LaboratoryWork laboratoryWorkEntity;
-    private static int arraySize = ThreadLocalRandom.current().nextInt(5, 6 + 1);
-    private static Integer[] inputArray=new Integer [arraySize];
-    static {
-        for (int i = 0; i < arraySize - 1;i++) {
-            inputArray[i]=i;
-        }
-    }
-    private static Integer[] outputArray = Tester_ArrayReverser.reverse(inputArray);
+    private static int arraySize = ThreadLocalRandom.current().nextInt(5, 25 + 1);
+    private static int[] inputArray = new int[arraySize];
+    private static int[] outputArray = new int[arraySize];
+    private static int[] inputArray2;
 
+
+    static {
+        for (int i = 0; i < arraySize; i++) {
+            inputArray[i] = i;
+            outputArray[arraySize - i - 1] = i;
+        }
+        inputArray2 = Arrays.copyOf(inputArray, arraySize);
+    }
 
 
     private static Stream<Arguments> stringAndIntProvider() {
-        return Stream.of(Arguments.of(inputArray, outputArray));
+        return Stream.of(Arguments.of(inputArray, outputArray, inputArray2));
     }
 
 
@@ -36,15 +41,16 @@ class Tester {
 
     @ParameterizedTest(name = "\"{0}\" should be {1}")
     @MethodSource("stringAndIntProvider")
-    void shouldReturn_RevertedArray(Integer[] input, Integer[] expected) {
-        //assertArrayEquals(expected, laboratoryWorkEntity.revertArray(input), "check value ");
-       // assertArrayEquals(expected, input, "check value ");
+    void shouldReturn_RevertedArray(int[] input, int[] expected, int[] input2) {
+        assertArrayEquals(expected, laboratoryWorkEntity.revertArray(input), "check array entity ");
 
     }
 
-    //@ParameterizedTest
-    //@ValueSource(ints = {0, 66, 100})
-    //void shouldReturn_EmptyString_When_PassIntegerOutOfMonthRange(int num) {
-        //assertEquals("", laboratoryWorkEntity.getMonthOfYear(num), "check value out of 1-12");
-    //}
+    @ParameterizedTest(name = "\"{0}\" should be {1}")
+    @MethodSource("stringAndIntProvider")
+    void shouldReturn_RevertedArray2(int[] input, int[] expected, int[] input2) {
+        assertArrayEquals(expected, laboratoryWorkEntity.revertArray2(input2), "check array entity ");
+    }
+
+
 }
