@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LaboratoryWork.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LaboratoryWork.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LaboratoryWork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="540">
+              <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
               <folding>
                 <element signature="e#1803#1804#0" expanded="true" />
                 <element signature="e#1874#1875#0" expanded="true" />
@@ -67,9 +67,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LaboratoryWork.java" />
         <option value="$PROJECT_DIR$/src/Logging.java" />
         <option value="$PROJECT_DIR$/test/Tester.java" />
+        <option value="$PROJECT_DIR$/src/LaboratoryWork.java" />
       </list>
     </option>
   </component>
@@ -209,34 +209,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tester - 2018.05.22 at 15h 12m 22s.xml">
+    <history-entry file="Tester - 2018.05.22 at 15h 53m 30s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 14m 19s.xml">
+    <history-entry file="Tester - 2018.05.22 at 15h 54m 57s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 14m 46s.xml">
+    <history-entry file="Tester - 2018.05.22 at 15h 55m 53s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 15m 50s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 00m 40s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 16m 37s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 03m 16s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 17m 02s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 05m 45s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 20m 37s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 06m 55s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 23m 43s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 08m 07s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 24m 06s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 09m 24s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.22 at 15h 24m 29s.xml">
+    <history-entry file="Tester - 2018.05.22 at 16h 09m 55s.xml">
       <configuration name="Tester" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
@@ -252,12 +252,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49517685" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49517685" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -337,17 +337,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Runner_LaboratoryWork.java">
+    <entry file="file://$PROJECT_DIR$/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LaboratoryWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="540">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding>
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1874#1875#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#1981#1982#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -363,16 +362,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Tester.java">
+    <entry file="file://$PROJECT_DIR$/src/Runner_LaboratoryWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
