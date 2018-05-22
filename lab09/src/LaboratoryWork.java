@@ -1,6 +1,34 @@
 public class LaboratoryWork {
 
-   // Logging.LOG_INFO("array size is - " + length);
+    public int[] filterArrayCuttingLength(int[] input) {
+        int length = input.length;
+        int counter = 0;
+        for (int i = 0; i < length; i++) {
+            int arrayItem = input[i];
+            if (arrayItem % 2 == 0) {
+                counter++;
+            }
+        }
+        int[] output = new int[counter];
+        for (int i = 0; i < length; i++) {
+            int arrayItem = input[i];
+            int counter2 = 0;
+            if (arrayItem % 2 == 0) {
+                output[counter2] = arrayItem;
+                counter2++;
+            }
+        }
+        return output;
+    }
+
+    public int[] filterArray(int[] input)
+    {
+        return input;
+
+    }
+
+
+    // Logging.LOG_INFO("array size is - " + length);
 
 
    /* Отфильтровать массив так, чтобы оставить только четные элементы. Для проверки четности можно использовать операцию "остаток от деления" - %
