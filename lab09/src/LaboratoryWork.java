@@ -10,14 +10,17 @@ public class LaboratoryWork {
             }
         }
         int[] output = new int[counter];
+        int counter2 = 0;
         for (int i = 0; i < length; i++) {
             int arrayItem = input[i];
-            int counter2 = 0;
+
             if (arrayItem % 2 == 0) {
                 output[counter2] = arrayItem;
+                Logging.LOG_INFO("output " +counter2+ " ==>"+output[counter2]);
                 counter2++;
             }
         }
+
         return output;
     }
 
