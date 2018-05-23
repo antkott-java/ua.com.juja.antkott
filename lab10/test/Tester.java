@@ -61,12 +61,12 @@ class Tester {
         }
         for (int item : input
                 ) {
-            Logging.LOG_INFO("input => " + item);
+//            Logging.LOG_INFO("input => " + item);
         }
-        Logging.LOG_INFO("====");
+//        Logging.LOG_INFO("====");
         for (int item : clone
                 ) {
-            Logging.LOG_INFO("sorted => " + item);
+           // Logging.LOG_INFO("sorted => " + item);
         }
         return clone;
     }
@@ -84,10 +84,10 @@ class Tester {
             merged[i + lengthClone1] = clone2[i];
         }
         merged = getSortedArray(merged);
-        Logging.LOG_INFO("== merge ==");
+//        Logging.LOG_INFO("== merge ==");
         for (int item : merged
                 ) {
-            Logging.LOG_INFO("merged => " + item);
+//            Logging.LOG_INFO("merged => " + item);
         }
         return merged;
     }
