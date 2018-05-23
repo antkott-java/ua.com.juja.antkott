@@ -11,7 +11,7 @@ public class LaboratoryWork {
 */
 
     public int[] mergeSortedArrays(int[] input1, int[] input2) {
-        Logging.LOG_INFO("======== ||||||||||||| ==");
+        Logging.LOG_INFO("======== ||||||mergeSortedArrays||||||| ==");
         StringBuilder stringBuilder1 = new StringBuilder();
         StringBuilder stringBuilder2 = new StringBuilder();
         for (int item : input1
@@ -38,21 +38,43 @@ public class LaboratoryWork {
                     merged[i] = input2[counterInputsArray2];
                     counterInputsArray2++;
                 }
-            } else if (counterInputsArray1 < length1 && counterInputsArray2 >= length2) {
+            } else if (counterInputsArray2 >= length2) {
                 merged[i] = input1[counterInputsArray1];
                 counterInputsArray1++;
-            } else if (counterInputsArray1 >= length1 && counterInputsArray2 < length2) {
+            } else if (counterInputsArray1 >= length1) {
                 merged[i] = input2[counterInputsArray2];
                 counterInputsArray2++;
             }
         }
-
         Logging.LOG_INFO("======== main-merged ==");
         for (int item : merged
                 ) {
             Logging.LOG_INFO("main-merged ==> " + item);
         }
         return merged;
+    }
+
+    public int[] mergeSortedArraysExampleFromJuja(int[] fst, int[] snd) {
+
+        int[] result = new int[fst.length + snd.length];
+        int fstIndex = 0;
+        int sndIndex = 0;
+        int counter = 0;
+        while (counter != result.length) {
+            if (fstIndex < fst.length && sndIndex < snd.length) {
+                if (fst[fstIndex] < snd[sndIndex]) {
+                    result[counter] = fst[fstIndex++];
+                } else {
+                    result[counter] = snd[sndIndex++];
+                }
+            } else if (fstIndex >= fst.length) {
+                result[counter] = snd[sndIndex++];
+            } else if (sndIndex >= snd.length) {
+                result[counter] = fst[fstIndex++];
+            }
+            counter = fstIndex + sndIndex;
+        }
+        return result;
     }
 
 

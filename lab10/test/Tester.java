@@ -1,10 +1,9 @@
 import lab.utils.LaboratoryWorkArraysCreator;
-import lab.utils.Logging;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
@@ -66,7 +65,7 @@ class Tester {
 //        Logging.LOG_INFO("====");
         for (int item : clone
                 ) {
-           // Logging.LOG_INFO("sorted => " + item);
+            // Logging.LOG_INFO("sorted => " + item);
         }
         return clone;
     }
@@ -107,14 +106,18 @@ class Tester {
     @MethodSource("variablesProvider1")
     void shouldReturn_MergedArray(int[] input1, int[] input2, int[] expected) {
         assertArrayEquals(expected, laboratoryWorkEntity.mergeSortedArrays(input1, input2), "check array entity ");
+    }
+
+    @ParameterizedTest(name = "\"{2}\" should be {1}+{0}")
+    @MethodSource("variablesProvider1")
+    void shouldReturn_MergedArray_ExampleJuja(int[] input1, int[] input2, int[] expected) {
+        assertArrayEquals(expected, laboratoryWorkEntity.mergeSortedArraysExampleFromJuja(input1, input2), "check array entity ");
 
     }
 
-   /* @ParameterizedTest(name = "run #{index} with [{arguments}]")
-    @ValueSource(ints = {0, 66, 9999999})
-    void shouldReturn_EmptyString_When_PassIntegerOutOfMonthRange(int num) {
-        //assertEquals("", laboratoryWorkEntity.getMonthOfYear(num), "check value out of 1-12");
-    }*/
-
+    @Test
+    void shouldReturn_WhenNull() {
+        assertArrayEquals(new int[]{1}, laboratoryWorkEntity.mergeSortedArraysExampleFromJuja(new int[]{1}, new int[0]), "check array entity ");
+    }
 
 }
