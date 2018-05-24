@@ -7,6 +7,7 @@ import java.util.logging.StreamHandler;
 public class Logging {
 
     private static Logger LOGGER;
+    private static boolean loggingInTest=false;
 
     static {
         System.setProperty("java.util.logging.SimpleFormatter.format",
@@ -22,7 +23,12 @@ public class Logging {
 
     public static void LOG_INFO(String message) {
         LOGGER.info(message);
+    }
 
+    public static void LOG_IN_TEST(String message) {
+        if (loggingInTest) {
+            LOGGER.info(message);
+        }
     }
 
 }
