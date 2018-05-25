@@ -7,7 +7,7 @@ import java.util.logging.StreamHandler;
 public class Logging {
 
     private static Logger LOGGER;
-    private static boolean loggingInTest=false;
+    private static boolean loggingInTest=true;
 
     static {
         System.setProperty("java.util.logging.SimpleFormatter.format",

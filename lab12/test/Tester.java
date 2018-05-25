@@ -1,10 +1,13 @@
 import lab.utils.LaboratoryWorkInputDataCreator;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
+
+import static lab.utils.Logging.LOG_IN_TEST;
 
 
 class Tester {
@@ -15,7 +18,7 @@ class Tester {
 
     static {
 //        inputData = 14;
-        //outputData = lookFor(inputData);
+        lookFor(inputData);
 
     }
 
@@ -44,13 +47,50 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
 
     }
 
-    public int[] lookFor(int[] array) {
+    public static int[] lookFor(int[] array) {
+        int[] resultArray = new int[2];
+        List<Integer> positiveNumbersIndexes = new ArrayList<>();
+        List<Integer> positiveNumbersDiapason = new ArrayList<>();
+
+        StringBuilder stringBuilder = new StringBuilder("input: ");
+        StringBuilder stringBuilderPositiveIndexes = new StringBuilder("positive indexes: ");
+        for (int i = 0; i < array.length; i++) {
+            stringBuilder.append(array[i]).append(", ");
+            if (array[i] > 0) {
+//                LOG_IN_TEST("i="+i+" "+array[i]);
+                positiveNumbersIndexes.add(Integer.valueOf(i));
+                stringBuilderPositiveIndexes.append(i).append(", ");
+            }
+        }
+        if (!positiveNumbersIndexes.isEmpty()) {
+            int currentDiapasonSize = 0;
+            int tempDiapasonSize = 0;
+            boolean currentDiapasonIsOver = false;
+            for (int i = 0; i < positiveNumbersIndexes.size() - 1; i++) {
+                if (positiveNumbersIndexes.get(i + 1) - positiveNumbersIndexes.get(i) == 1) {
+                    tempDiapasonSize++;
+                    LOG_IN_TEST("tempDiapasonSize="+tempDiapasonSize);
+                    resultArray[1] = positiveNumbersIndexes.get(i + 1);
+                } else {
+                    currentDiapasonIsOver = true;
+//                    if (tempDiapasonSize > currentDiapasonSize) currentDiapasonSize = tempDiapasonSize;
+                    resultArray[0] = positiveNumbersIndexes.get(i - tempDiapasonSize);
+                    tempDiapasonSize=0;
+                }
+
+
+            }
+            LOG_IN_TEST(stringBuilder.toString());
+            LOG_IN_TEST(stringBuilderPositiveIndexes.toString());
+            LOG_IN_TEST("result = " + resultArray[0] + " " + resultArray[1]);
+        }
         return array;
     }
 
-    @ParameterizedTest(name = "\"{0}\" should be {1}")
-    @MethodSource("variablesProvider1")
-    void shouldReturn_CorrectOutput(int input, int expected) {
+    //@ParameterizedTest(name = "\"{0}\" should be {1}")
+    //@MethodSource("variablesProvider1")
+    @Test
+    void shouldReturn_CorrectOutput() {
         //assertEquals (expected, laboratoryWorkEntity.lookFor(input), "check equals");
     }
 /*

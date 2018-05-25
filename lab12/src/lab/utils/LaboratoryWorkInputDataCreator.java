@@ -16,6 +16,6 @@ public class LaboratoryWorkInputDataCreator {
     }
 
     public static int getRandomInt(int max) {
-        return ThreadLocalRandom.current().nextInt(1, max);
+        return ThreadLocalRandom.current().nextInt(-9999, max);
     }
 }
