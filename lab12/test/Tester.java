@@ -16,11 +16,6 @@ class Tester {
     private static int[] inputData = LaboratoryWorkInputDataCreator.integerRandomArray(21);
     private static int outputData;
 
-    static {
-//        inputData = 14;
-        lookFor(inputData);
-
-    }
 
     private static Stream<Arguments> variablesProvider1() {
         return Stream.of(Arguments.of(inputData, outputData));
@@ -47,6 +42,13 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
 
     }
 
+    static {
+//        inputData = 14;
+        //lookFor(inputData);
+        lookFor(new int[] {364,55});
+    }
+
+
     public static int[] lookFor(int[] array) {
         int[] resultArray = new int[2];
         List<Integer> positiveNumbersIndexes = new ArrayList<>();
@@ -71,6 +73,9 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
                     tempDiapasonSize++;
                     LOG_IN_TEST("tempDiapasonSize="+tempDiapasonSize);
                     resultArray[1] = positiveNumbersIndexes.get(i + 1);
+                    if ((i+1)==(positiveNumbersIndexes.size() - 1)){
+                        resultArray[0] = positiveNumbersIndexes.get(i - tempDiapasonSize);
+                    }
                 } else {
                     currentDiapasonIsOver = true;
 //                    if (tempDiapasonSize > currentDiapasonSize) currentDiapasonSize = tempDiapasonSize;

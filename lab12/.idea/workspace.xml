@@ -38,8 +38,8 @@
       <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="71" column="70" lean-forward="true" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
+            <state relative-caret-position="302">
+              <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#712#713#0" expanded="true" />
@@ -223,18 +223,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tester - 2018.05.25 at 14h 20m 12s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.05.25 at 14h 24m 20s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.05.25 at 15h 36m 08s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.05.25 at 15h 36m 22s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Tester - 2018.05.25 at 15h 40m 25s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
@@ -253,6 +241,18 @@
     <history-entry file="Tester - 2018.05.25 at 19h 07m 39s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Tester - 2018.05.25 at 19h 13m 01s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.05.25 at 19h 17m 17s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.05.25 at 19h 17m 41s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.05.25 at 19h 21m 36s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -266,7 +266,7 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297414" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -277,7 +277,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39978448" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -289,6 +289,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ua.com.juja.antkott.lab12.iml">
@@ -331,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="71" column="70" lean-forward="true" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
+        <state relative-caret-position="302">
+          <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#712#713#0" expanded="true" />
