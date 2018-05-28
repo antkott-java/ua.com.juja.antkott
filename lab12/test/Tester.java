@@ -16,9 +16,10 @@ class Tester {
     private static int[] inputData = LaboratoryWorkInputDataCreator.integerRandomArray(21);
     private static int outputData;
 
-
-    private static Stream<Arguments> variablesProvider1() {
-        return Stream.of(Arguments.of(inputData, outputData));
+    static {
+//        inputData = 14;
+        //lookFor(inputData);
+        lookFor(new int[]{364, 4555, 44, 44, 55, -4466, 788, 445, 4455});
     }
 
     /*
@@ -36,23 +37,20 @@ lookFor([1, 1, 0, 1, 1]) = [0, 1] // возвращаем левый
 lookFor([0, -1, 0, -1]) = [] // отсутствуют положительные числа!
 */
 
+    private static Stream<Arguments> variablesProvider1() {
+        return Stream.of(Arguments.of(inputData, outputData));
+    }
+
     @BeforeAll
     public static void init() {
         laboratoryWorkEntity = new LaboratoryWork();
 
     }
 
-    static {
-//        inputData = 14;
-        //lookFor(inputData);
-        lookFor(new int[] {364,55});
-    }
-
-
     public static int[] lookFor(int[] array) {
         int[] resultArray = new int[2];
         List<Integer> positiveNumbersIndexes = new ArrayList<>();
-        List<Integer> positiveNumbersDiapason = new ArrayList<>();
+        ArrayList<int[]> positiveNumbersDiapason = new ArrayList<>();
 
         StringBuilder stringBuilder = new StringBuilder("input: ");
         StringBuilder stringBuilderPositiveIndexes = new StringBuilder("positive indexes: ");
@@ -70,19 +68,32 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
             boolean currentDiapasonIsOver = false;
             for (int i = 0; i < positiveNumbersIndexes.size() - 1; i++) {
                 if (positiveNumbersIndexes.get(i + 1) - positiveNumbersIndexes.get(i) == 1) {
-                    tempDiapasonSize++;
-                    LOG_IN_TEST("tempDiapasonSize="+tempDiapasonSize);
+
+                    LOG_IN_TEST("tempDiapasonSize=" + tempDiapasonSize);
                     resultArray[1] = positiveNumbersIndexes.get(i + 1);
-                    if ((i+1)==(positiveNumbersIndexes.size() - 1)){
+                    if ((i + 1) == (positiveNumbersIndexes.size() - 1)) {
                         resultArray[0] = positiveNumbersIndexes.get(i - tempDiapasonSize);
+                        LOG_IN_TEST("resultArray[0]=end=" + resultArray[0]);
+                        positiveNumbersDiapason.add(new int[]{resultArray[0], resultArray[1]});
                     }
+                    tempDiapasonSize++;
                 } else {
                     currentDiapasonIsOver = true;
 //                    if (tempDiapasonSize > currentDiapasonSize) currentDiapasonSize = tempDiapasonSize;
                     resultArray[0] = positiveNumbersIndexes.get(i - tempDiapasonSize);
-                    tempDiapasonSize=0;
+                    LOG_IN_TEST("resultArray[0]=" + resultArray[0]);
+                    positiveNumbersDiapason.add(new int[]{resultArray[0], resultArray[1]});
+                    tempDiapasonSize = 0;
                 }
-
+            }
+            int maxLength = 0;
+            for (int[] i : positiveNumbersDiapason
+                    ) {
+                LOG_IN_TEST("diapason [" + i[0] + " " + i[1] + "]");
+                int lengthTemp = i[1] - i[0];
+                if (maxLength > lengthTemp) {
+                    
+                }
 
             }
             LOG_IN_TEST(stringBuilder.toString());
