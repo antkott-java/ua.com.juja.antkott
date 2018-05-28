@@ -16,11 +16,7 @@ class Tester {
     private static int[] inputData = LaboratoryWorkInputDataCreator.integerRandomArray(21);
     private static int outputData;
 
-    static {
-//        inputData = 14;
-        //lookFor(inputData);
-        lookFor(new int[]{364, 4555, 44, 44, 55, -4466, 788, 445, 4455});
-    }
+
 
     /*
 На вход подается одномерный массив. Необходимо найти диапазон максимальной ширины, элементы которого положительные (больше 0).
@@ -47,9 +43,105 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
 
     }
 
-    public static int[] lookFor(int[] array) {
+    static {
+        lookFor_lab12(inputData);
+//        lookFor_lab12(new int[]{22,33,55, -1000, 55,55,555});
+    }
+
+
+    public static int[] lookFor_lab12(int[] array) {
+        int[] result = new int[2];
+        int firstIndex = 0;
+        int lastIndex = 0;
+        int sequenceLength = 0;
+        int currentSequenceLength = 0;
+
+        StringBuilder stringBuilder = new StringBuilder("input: ");
+        StringBuilder stringBuilderPositiveIndexes = new StringBuilder("positive indexes: ");
+
+        for (int i = array.length - 1; i >= 0; i--) {
+            stringBuilder.append(array[i]).append(", ");
+            if (array[i] > 0) {
+                if (currentSequenceLength == 0) {
+                    firstIndex = i;
+                }
+                currentSequenceLength++;
+                lastIndex = i;
+            } else {
+                if (currentSequenceLength > sequenceLength) {
+                    sequenceLength = currentSequenceLength;
+                    result[0] = lastIndex;
+                    result[1] = firstIndex;
+                }
+                currentSequenceLength = 0;
+            }
+
+            if (currentSequenceLength > sequenceLength) {
+                sequenceLength = currentSequenceLength;
+                result[0] = lastIndex;
+                result[1] = firstIndex;
+            }
+        }
+
+        if (sequenceLength == 0) {
+            return new int[0];
+        }
+
+        LOG_IN_TEST(stringBuilder.toString());
+        LOG_IN_TEST("result = " + result[0] + " " + result[1]);
+        return result;
+    }
+
+
+    public static int[] lookFor_lab11(int[] array) {
+        int[] result = new int[2];
+        int firstIndex = 0;
+        int lastIndex = 0;
+        int sequenceLength = 0;
+        int currentSequenceLength = 0;
+
+        StringBuilder stringBuilder = new StringBuilder("input: ");
+        StringBuilder stringBuilderPositiveIndexes = new StringBuilder("positive indexes: ");
+
+        for (int i = 0; i < array.length; i++) {
+            stringBuilder.append(array[i]).append(", ");
+            if (array[i] > 0) {
+                if (currentSequenceLength == 0) {
+                    firstIndex = i;
+                }
+                currentSequenceLength++;
+                lastIndex = i;
+
+            } else {
+                if (currentSequenceLength > sequenceLength) {
+                    sequenceLength = currentSequenceLength;
+                    result[0] = firstIndex;
+                    result[1] = lastIndex;
+                }
+                currentSequenceLength = 0;
+            }
+
+            if (currentSequenceLength > sequenceLength) {
+                sequenceLength = currentSequenceLength;
+                result[0] = firstIndex;
+                result[1] = lastIndex;
+            }
+
+
+        }
+
+        if (sequenceLength == 0) {
+            return new int[0];
+        }
+
+        LOG_IN_TEST(stringBuilder.toString());
+        LOG_IN_TEST("result = " + result[0] + " " + result[1]);
+        return result;
+    }
+
+    public static int[] lookFor_00(int[] array) {
         int[] resultArray = new int[2];
-        List<Integer> positiveNumbersIndexes = new ArrayList<>();
+        ArrayList<Integer> positiveNumbersIndexes = new ArrayList<>();
         ArrayList<int[]> positiveNumbersDiapason = new ArrayList<>();
 
         StringBuilder stringBuilder = new StringBuilder("input: ");
@@ -91,8 +183,10 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
                     ) {
                 LOG_IN_TEST("diapason [" + i[0] + " " + i[1] + "]");
                 int lengthTemp = i[1] - i[0];
-                if (maxLength > lengthTemp) {
-                    
+                if (maxLength < lengthTemp) {
+                    maxLength = lengthTemp;
+                    resultArray[0] = i[0];
+                    resultArray[1] = i[1];
                 }
 
             }
@@ -100,7 +194,7 @@ lookFor([0, -1, 0, -1]) = [] // отсутствуют положительны�
             LOG_IN_TEST(stringBuilderPositiveIndexes.toString());
             LOG_IN_TEST("result = " + resultArray[0] + " " + resultArray[1]);
         }
-        return array;
+        return resultArray;
     }
 
     //@ParameterizedTest(name = "\"{0}\" should be {1}")

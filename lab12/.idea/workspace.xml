@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/lab/utils/LaboratoryWorkInputDataCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -38,10 +38,12 @@
       <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
+            <state relative-caret-position="356">
+              <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,19 +86,16 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-5" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1937" />
+    <option name="height" value="1067" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +123,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,6 +211,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1b910458-fc1e-4fd5-bb73-e74f2b0c5d3b" name="Default" comment="" />
@@ -220,39 +225,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tester - 2018.05.28 at 11h 53m 47s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 52m 36s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 11h 54m 52s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 53m 09s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 11h 56m 58s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 54m 03s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 07m 33s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 54m 24s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 09m 03s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 54m 34s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 09m 50s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 54m 53s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 13m 09s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 55m 06s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 13m 46s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 59m 01s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 14m 34s.xml">
+    <history-entry file="Tester - 2018.05.28 at 21h 59m 49s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tester - 2018.05.28 at 12h 15m 25s.xml">
+    <history-entry file="Tester - 2018.05.28 at 22h 00m 09s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="817" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -264,12 +269,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -282,6 +286,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Learn" order="2" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -293,6 +298,56 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Runner_LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/utils/LaboratoryWorkInputDataCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ua.com.juja.antkott.lab12.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/utils/Logging.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Runner_LaboratoryWork.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -337,6 +392,8 @@
           <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -375,16 +432,18 @@
     <entry file="file://$PROJECT_DIR$/src/lab/utils/LaboratoryWorkInputDataCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
+        <state relative-caret-position="356">
+          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -406,7 +465,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -429,7 +488,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>JDK_1.8.0</last-edited>
+          <last-edited>9.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -446,6 +505,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
