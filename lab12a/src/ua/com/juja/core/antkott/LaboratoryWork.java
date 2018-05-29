@@ -4,49 +4,32 @@ import static lab.utils.Logging.LOG_INFO;
 
 public class LaboratoryWork {
 
-/*
-Реализовать функцию, которая по целочисленому аргументу c возвращает количество целочисленных решений неравенства
+    /*
 
-a*a + b*b <= c
-a > 0
-b > 0
-Например:
-
-lookFor(14) == 8
-поскольку для решения подходят следующие пары значений
-
-(a=1, b=1)
-(a=1, b=2)
-(a=1, b=3)
-(a=2, b=1)
-(a=2, b=2)
-(a=2, b=3)
-(a=3, b=1)
-(a=3, b=2)
-*/
+     */
 
 
-    public int lookFor(int max) {
-        int middle = max / 2;
-        int base = 1;
-        int counter = 0;
+    public int findUnpairedNumber(int[] array) {
+        int result = -1;
+        for (int i = 0; i < array.length; i++) {
+            int currentItem = array[i];
+            boolean pairedNumberFound = false;
 
-        for (int i = middle; i > 0; i--) {
-            if (i * i <= max) {
-                base = i;
-                LOG_INFO("base = " + base + " (max=" + max + ")");
-                i = 0;
-            }
-        }
+            for (int j = 0; j < array.length; j++) {
+                if (j == i) {
+                    continue;
+                } else if (currentItem == array[j]) {
+                    pairedNumberFound = true;
+                    LOG_INFO("found paired for " + currentItem + " this is " + array[j]);
 
-        for (int i = 1; i <= base; i++) {
-            for (int j = 1, k = i * i; j <= base; j++) {
-                if ((k + j * j) <= max) {
-                    counter += 1;
                 }
             }
+            if (!pairedNumberFound) {
+                result = i;
+            }
         }
-        return counter;
+        LOG_INFO("found Unpaired number index = " + result);
+        return result;
     }
 
 }
