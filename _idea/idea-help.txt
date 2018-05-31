@@ -1,0 +1,7 @@
+PATH TO TEMPLATE
+c:\Users\%username%\.IdeaIC2018.1\config\projectTemplates\
+
+
+SHORT-KEY:
+Ctrl + Shift+A = find
+Ctrl + E - recent

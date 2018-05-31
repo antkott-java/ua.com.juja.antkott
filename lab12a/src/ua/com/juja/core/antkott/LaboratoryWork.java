@@ -17,9 +17,10 @@ public class LaboratoryWork {
     }
 
     private boolean isPairedNumberFound(int[] array, int currentIndex) {
-        int currentItem = array[currentIndex];
 
+        int currentItem = array[currentIndex];
         for (int j = 0; j < array.length; j++) {
+            int a = 0;
             if (j == currentIndex) {
                 continue;
             }
