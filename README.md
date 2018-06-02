@@ -1,1 +1,0 @@
-# ua.com.juja.antkott

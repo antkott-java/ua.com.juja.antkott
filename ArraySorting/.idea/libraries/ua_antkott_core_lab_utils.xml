@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ua.antkott.core.lab.utils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../utils/out/artifacts/ua_antkott_core_lab_utils_jar/ua.antkott.core.lab.utils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
