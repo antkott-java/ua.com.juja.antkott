@@ -1,6 +1,7 @@
 package ua.com.juja.core.antkott;
 
 import static ua.com.juja.core.antkott.utils.Logging.logInfo;
+import static ua.com.juja.core.antkott.utils.lab.LaboratoryWorkUtils.printArrayElements;
 
 
 public class LaboratoryWork {
@@ -10,26 +11,8 @@ public class LaboratoryWork {
     http://www.java2novice.com/java-sorting-algorithms/
      */
 
-    public int[] bubbleSort(int[] input) {
-        long startTime = System.currentTimeMillis();
-        int[] in = input.clone();
 
-        boolean swapped = true;
-        while (swapped) {
-            swapped = false;
-            for (int i = 0; i < in.length - 1; i++) {
-                if (in[i] > in[i + 1]) {
-                    swapped = true;
-                    swapElements(in, i + 1, i);
-                }
-            }
-        }
-        long duration = System.currentTimeMillis() - startTime;
-        logInfo("Bubble Sort duration = " + duration);
-        return in;
-    }
-
-    public int[] selectSort(int[] input) {
+    public int[] selectSortFromInet(int[] input) {
         long startTime = System.currentTimeMillis();
         int[] in = input.clone();
         // One by one move boundary of unsorted subarray
@@ -45,7 +28,7 @@ public class LaboratoryWork {
             swapElements(in, i, index);
         }
         long duration = System.currentTimeMillis() - startTime;
-        logInfo("Select Sort duration = " + duration);
+        logInfo("Select Sort-from-inet duration = " + duration);
         return in;
     }
 
@@ -55,84 +38,45 @@ public class LaboratoryWork {
         array[firstElement] = temp;
     }
 
-    public int[] insertSort(int[] input) {
+    public int[] selectSortLab15Original(int[] input) {
         long startTime = System.currentTimeMillis();
-        int[] in = input.clone();
-        for (int i = 1; i < in.length; i++) {
-            int key = in[i];
-            int j = i - 1;
-            while (j >= 0 && in[j] > key) {
-                in[j + 1] = in[j];
-                j--;
-            }
-            in[j + 1] = key;
-        }
-
-        long duration = System.currentTimeMillis() - startTime;
-        logInfo("Insertion Sort duration = " + duration);
-        return in;
-    }
-
-    public int[] insertSort2(int[] input) {
-        long startTime = System.currentTimeMillis();
-        int[] in = input.clone();
-        for (int i = 1; i < in.length; i++) {
-            for (int j = i; j > 0; j--) {
-                if (in[j] < in[j - 1]) {
-                    swapElements(in, j, j - 1);
+        int[] arr = input.clone();
+        for (int barrier = 0; barrier < arr.length - 1; barrier++) {
+            for (int index = barrier + 1; index < arr.length; index++) {
+                if (arr[barrier] > arr[index]) {
+                    int tmp = arr[index];
+                    arr[index] = arr[barrier];
+                    arr[barrier] = tmp;
                 }
             }
         }
         long duration = System.currentTimeMillis() - startTime;
-        logInfo("Insertion Sort 2 duration = " + duration);
-        return in;
+        logInfo("Select Sort Lab15 original duration = " + duration);
+        return arr;
     }
 
-    public int[] quickSort(int[] input) {
+    public int[] selectSortLab15(int[] input) {
         long startTime = System.currentTimeMillis();
-        int[] in = input.clone();
-
-        quickSortInternal(in, 0, in.length - 1);
+        int[] arr = input.clone();
+        //printArrayElements(arr);
+        for (int barrier = 0; barrier < arr.length - 1; barrier++) {
+            int itemBarrier = arr[barrier];
+            int smallestElement = itemBarrier;
+            int smallestElementIndex = barrier;
+            for (int index = barrier + 1; index < arr.length; index++) {
+                if (smallestElement > arr[index]) {
+                    smallestElement = arr[index];
+                    smallestElementIndex = index;
+                }
+            }
+            arr[barrier] = smallestElement;
+            arr[smallestElementIndex] = itemBarrier;
+        }
 
         long duration = System.currentTimeMillis() - startTime;
-        logInfo("Quick Sort duration = " + duration);
-        return in;
-    }
-
-    private void quickSortInternal(int[] arr, int low, int high) {
-        if (low < high) {
-            /* pi is partitioning index, arr[pi] is
-              now at right place */
-            int pi = partition(arr, low, high);
-
-            // Recursively sort elements before
-            // partition and after partition
-            quickSortInternal(arr, low, pi - 1);
-            quickSortInternal(arr, pi + 1, high);
-        }
-    }
-
-    private int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
-        int i = (low - 1); // index of smaller element
-        for (int j = low; j < high; j++) {
-            // If current element is smaller than or
-            // equal to pivot
-            if (arr[j] <= pivot) {
-                i++;
-
-                // swap arr[i] and arr[j]
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-        // swap arr[i+1] and arr[high] (or pivot)
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
-
-        return i + 1;
+        logInfo("Select Sort Lab15 duration = " + duration);
+        printArrayElements(arr);
+        return arr;
     }
 
 
