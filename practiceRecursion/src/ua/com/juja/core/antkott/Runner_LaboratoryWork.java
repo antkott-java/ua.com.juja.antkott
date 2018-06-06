@@ -11,6 +11,8 @@ public class Runner_LaboratoryWork {
         String more_actions_are_needed = laboratoryWorkRunner.solve("MORE_ACTIONS_ARE_NEEDED");
         logInfo("result: " +more_actions_are_needed);
         logInfo("fibonachi (n=6): " +laboratoryWorkRunner.fibonachi(6));
+
+
     }
 
 

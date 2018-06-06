@@ -21,6 +21,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="org.junit.jupiter:junit-jupiter-params:5.2.0" level="project" />
-    <orderEntry type="library" name="ua.antkott.core.lab.utils" level="project" />
+    <orderEntry type="library" name="_lib" level="project" />
   </component>
 </module>

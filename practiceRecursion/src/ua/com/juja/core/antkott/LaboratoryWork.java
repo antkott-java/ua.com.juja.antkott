@@ -26,4 +26,12 @@ public class LaboratoryWork {
         }
         return 1;
     }
+
+    public static void main(String[] args) {
+        System.out.println(f(5, 3));
+    }
+    public static int f(int a, int b) {
+        return (b == 1) ? a : a * f(a, b - 1);
+    }
+
 }
