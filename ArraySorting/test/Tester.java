@@ -19,8 +19,8 @@ class Tester {
     private static int[] outputData;
 
     static {
-      /*  inputData = new int[]{10, 2, 4, 5, 9, 7, 1, 3, 6, 8};
-        outputData = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};*/
+        inputData = new int[]{10, 2, 4, 5, 9, 7, 1, 3, 6, 8};
+        outputData = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
       int[][] inputs = LaboratoryWorkInputDataCreator.generateIntUnsortedAndSortedArray(10000, 0, 999);
         inputData = inputs[0];
         outputData = inputs[1];
@@ -56,6 +56,11 @@ class Tester {
     @Test
     void shouldReturn_SortedArray_QuickSort() {
         assertArrayEquals(outputData, laboratoryWorkEntity.quickSort(inputData), "check equals");
+    }
+
+    @Test
+    void shouldReturn_SortedArray_MergeSort() {
+        assertArrayEquals(outputData, laboratoryWorkEntity.mergeSort(inputData), "check equals");
     }
 
 
