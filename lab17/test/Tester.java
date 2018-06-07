@@ -23,9 +23,9 @@ class Tester {
 
     }
 
-//    private static Stream<Arguments> variablesProvider1() {
-//        return Stream.of(Arguments.of(inputData, outputData));
-//    }
+
+
+
 
 
     @BeforeAll
