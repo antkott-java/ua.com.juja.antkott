@@ -12,45 +12,46 @@ public class Parser {
 
 
     public static int eval(String expr) {
-        return eval(expr, 0, expr.length()-1);
+        rightOperandStr = null;
+        return eval(expr, 0, expr.length() - 1);
     }
 
+    private static String rightOperandStr;
+
     private static int eval(String expr, int from, int to) {
-
-        int length = expr.length();
-        //if (to == length) to--;
-        logInfo("INPUT " +getExpr(expr, from, to));
-        logInfo("(from:to)=(" +from+":"+ to+")");
-        //from=length;
-
-        logInfo(" if expr.charAt(to:"+to+")==) (" + expr.charAt(to)+"), "+(expr.charAt(to) == ')'));
+        logInfo("INPUT " + getExpr(expr, from, to));
+        logInfo("(from:to)=(" + from + ":" + to + ")");
+        logInfo(" if expr.charAt(to:" + to + ")==) (" + expr.charAt(to) + "), " + (expr.charAt(to) == ')'));
         if (expr.charAt(to) == ')') {
             logInfo(" if ')': " + getExpr(expr, from + 1, to - 1));
             return eval(expr, from + 1, to - 1);
         } else {
-//            logInfo(" else ')': " + getExpr(expr, from, to));
             int pos = to;
-            logInfo(" (pos>from) " + pos + ">" + from + " = "+(pos > from));
+            logInfo(" (pos>from) " + pos + ">" + from + " = " + (pos > from));
             while (pos > from) {
-                logInfo("  start while: expr.charAt("+pos+"):" + expr.charAt(pos));
+                logInfo("  start while: expr.charAt(" + pos + "):" + expr.charAt(pos));
                 if (Character.isDigit(expr.charAt(pos))) {
-                    logInfo("   character.isDigit("+pos+"):" + expr.charAt(pos)+" pos--");
+                    logInfo("   character.isDigit(" + pos + "):" + expr.charAt(pos) + " pos--");
+                    if (rightOperandStr != null) {
+                        rightOperandStr = expr.charAt(pos) + rightOperandStr;
+                        logInfo("   rightOperandStr: " + rightOperandStr);
+                    } else {
+                        rightOperandStr = expr.substring(pos, pos + 1);
+                        logInfo("   rightOperandStr (null): " + rightOperandStr);
+                    }
                     pos--;
                 } else {
-                    logInfo("   pos:from:to "+pos+":"+from+":"+to);
-                    logInfo("   Character.isNOTDigit("+pos+"):" + expr.charAt(pos));
-//                    logInfo("leftOperand: " +  getExpr(expr, from, pos));
-//                    int leftOperand = Integer.valueOf(expr.substring(from, pos));
-                    logInfo("   rightOperand: Integer.valueOf: " +  getExpr(expr, pos+1, pos+2));
-                    int rightOperand = Integer.valueOf(expr.substring(pos+1, pos+2));
-                    logInfo("   operation: expr.charAt("+pos+"):" + expr.charAt(pos));
+                    logInfo("   pos:from:to " + pos + ":" + from + ":" + to);
+                    logInfo("   Character.isNOTDigit(" + pos + "):" + expr.charAt(pos));
+                    logInfo("   rightOperand: Integer.valueOf: " + rightOperandStr);
+                    int rightOperand = Integer.valueOf(rightOperandStr);
+                    rightOperandStr = null;
+                    logInfo("   operation: expr.charAt(" + pos + "):" + expr.charAt(pos));
                     char operation = expr.charAt(pos);
-                    logInfo("   leftOperand: run another eval" +  getExpr(expr, from, pos-1));
-                    int leftOperand = eval(expr, from, pos-1);
-
-//                    int rightOperand = eval(expr, pos + 1, to);
-
-                    logInfo("operation:" + operation + " expr:" + expr + " chartAt(" + pos + ") is:" + operation);
+                    logInfo("   leftOperand: run another eval" + getExpr(expr, from, pos - 1));
+                    int leftOperand = eval(expr, from, pos - 1);
+                    logInfo("    operation: " + operation + " expr:" + expr + " chartAt(" + pos + ") is:" + operation);
+                    logInfo("     operation: " + leftOperand + " " + operation + " " + rightOperand);
                     switch (operation) {
                         case '+':
                             return leftOperand + rightOperand;
@@ -63,12 +64,12 @@ public class Parser {
                     }
                 }
             }
-            logInfo("return Integer.valueOf " + getExpr(expr, from, to+1));
-            return Integer.valueOf(expr.substring(from, to+1));
+            logInfo("return Integer.valueOf " + getExpr(expr, from, to + 1));
+            return Integer.valueOf(expr.substring(from, to + 1));
         }
     }
 
     private static String getExpr(String expr, int from, int to) {
-        return "("+from+":"+to+"):" + expr.substring(from, to) + ":";
+        return "(" + from + ":" + to + "):" + expr.substring(from, to) + ":";
     }
 }
