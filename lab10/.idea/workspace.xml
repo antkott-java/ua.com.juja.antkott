@@ -42,8 +42,8 @@
       <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="45" />
+            <state relative-caret-position="261">
+              <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,9 +91,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,7 +118,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -248,7 +248,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -273,11 +273,11 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -289,6 +289,44 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Runner_LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/utils/Logging.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/utils/LaboratoryWorkArraysCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Runner_LaboratoryWork.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -395,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="45" />
+        <state relative-caret-position="261">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
