@@ -21,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="366">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LaboratoryWork.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LaboratoryWork.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ua/com/juja/core/antkott/LaboratoryWork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="60">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1937" />
@@ -63,6 +63,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -79,8 +81,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -222,36 +222,55 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tester - 2018.06.14 at 17h 22m 55s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_shouldReturn_CorrectOutput - 2018.06.14 at 17h 23m 40s.xml">
-      <configuration name="Tester.shouldReturn_CorrectOutput" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Tester_shouldReturn_CorrectOutput_(1) - 2018.06.14 at 17h 25m 26s.xml">
       <configuration name="Tester.shouldReturn_CorrectOutput (1)" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Tester - 2018.06.14 at 17h 25m 49s.xml">
       <configuration name="Tester" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 17h 46m 05s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 08m 44s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 09m 32s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 12m 07s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 12m 31s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 12m 56s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 15m 50s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tester - 2018.06.18 at 18h 16m 54s.xml">
+      <configuration name="Tester" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="817" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -264,14 +283,36 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info id="Learn" order="2" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ua/com/juja/core/antkott/Runner_LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/com/juja/core/antkott/LaboratoryWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/com/juja/core/antkott/Runner_LaboratoryWork.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -302,7 +343,17 @@
     <entry file="file://$PROJECT_DIR$/lab19.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -315,18 +366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/com/juja/core/antkott/LaboratoryWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

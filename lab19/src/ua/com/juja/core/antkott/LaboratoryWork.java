@@ -15,23 +15,27 @@ public class LaboratoryWork {
 
 */
 
-private int[] moneyNominals = {1,2,5,10,25,50};
-private int counterExhcange = 0;
+    private int[] moneyNominals = {1, 2, 5, 10, 25, 50};
+
 
     public int exchangeAmountOfCoinsBrutForce(int amountForExchange) {
-        return amountForExchange;
+        for (int i = moneyNominals.length - 1; i >= 0; i--) {
+            if (amountForExchange / moneyNominals[i] >= 1) {
+                return exchange(amountForExchange, i);
+            }
+        }
+        return 0;
     }
 
 
-    private int exchange (int amount){
-
-        for (int j = 0; j <moneyNominals.length ; j++) {
-            int moneyNominal = moneyNominals[j];
-            if (amount % moneyNominal ==0){
-                counterExhcange+=amount / moneyNominal;
-            }
+    private int exchange(int amount, int moneyNominalsIndex) {
+        if (amount == 0 || moneyNominalsIndex == 0) {
+            return 1;
         }
-return counterExhcange;
+        if (amount >= moneyNominals[moneyNominalsIndex]) {
+            return exchange(amount, moneyNominalsIndex - 1) + exchange(amount - moneyNominals[moneyNominalsIndex], moneyNominalsIndex);
+        }
+        return exchange(amount, moneyNominalsIndex - 1);
     }
 
 }
