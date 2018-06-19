@@ -1,8 +1,6 @@
 package ua.com.juja.core.antkott;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Permutator {
 
@@ -69,32 +67,13 @@ N) те, что начинаются с a(N)
 */
 
 
-    static List<int[]> result = new ArrayList<>();
-
     public static void permutation(int[] list, int size) {
-        if (size == 0) {
-            System.out.println("[" + 0 + "]");
-            return;
-        }
-        if (size == 1) {
-            System.out.println("[" + 1 + "]");
-            return;
-        }
-        internalPermutation(list, size);
-        for (int[] item : result
-                ) {
-            System.out.println(Arrays.toString(item));
-        }
-    }
-
-    private static void internalPermutation(int[] list, int size) {
         if (size < 2) {
-            swap(list, 0, 1);
-            //System.out.println(Arrays.toString(list));
+            System.out.println(Arrays.toString(list));
         } else {
             for (int k = 0; k < size; k++) {
                 swap(list, k, size - 1);
-                internalPermutation(list, size - 1);
+                permutation(list, size - 1);
                 swap(list, k, size - 1);
             }
         }
@@ -104,16 +83,6 @@ N) те, что начинаются с a(N)
         int tmp = arr[index0];
         arr[index0] = arr[index1];
         arr[index1] = tmp;
-        boolean contains = false;
-        for (int[] item : result
-                ) {
-            if (Arrays.equals(item, arr)) {
-                contains = true;
-            }
-        }
-        if (!contains) {
-            int[] clone = arr.clone();
-            result.add(clone);
-        }
+
     }
 }
