@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="_lib">
+    <CLASSES>
+      <root url="file://$ua.antkott.core.lib$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$ua.antkott.core.lib$" recursive="false" />
+  </library>
+</component>
