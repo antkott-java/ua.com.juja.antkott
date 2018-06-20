@@ -1,8 +1,8 @@
 import ua.com.juja.core.antkott.MatrixUtils;
 
 public class Test {
-    
-    @org.junit.jupiter.api.Test
+
+//    @org.junit.jupiter.api.Test
     public static void main(String[] args) {
         int[][] a = {{10}};
         int[][] b = {{100}};
