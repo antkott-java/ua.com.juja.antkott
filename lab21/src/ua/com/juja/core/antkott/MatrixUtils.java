@@ -47,29 +47,54 @@ public class MatrixUtils {
         if (fst==null||snd==null){
             throw new IllegalArgumentException();
         }
-        if (fst.length !=snd[0].length){
-            throw new IllegalArgumentException();
-        }
+
+        int fstYLength = fst.length;
+        int fstXLength = fst[0].length;
+        int sndYLength = snd.length;
+        int sndXLength = snd[0].length;
+        logInfo("len fst(Y:X)("+ fstYLength +":"+ fstXLength +")");
+
+
+        logInfo("len snd(Y:X) ("+ sndYLength +":"+ sndXLength +")");
+//        if (fst.length !=snd[0].length){
+//            throw new IllegalArgumentException();
+//        }
 //        logInfo("start");
 //        logInfo(Arrays.deepToString(fst));
 //        logInfo(Arrays.deepToString(snd));
-        int[][] mul = new int[fst.length][snd[0].length];
-        if (fst.length ==1 && snd.length==1){
+        int[][] mul = new int[fstYLength][sndXLength];
+        if (fstYLength ==1 && sndYLength ==1){
             mul[0][0]=fst[0][0]*snd[0][0];
             return  mul;
-        }
-        for (int i = 0; i < fst.length-1; i++) {
-            for (int j = 0; j < fst[0].length-1; j++) {
-                int i1 = fst[i][j];
-                logInfo("fst="+fst[i][j]);
+        } else {
+            int counter=0;
+            for (int i = 0; i < fstXLength; i++) {
+                for (int j = 0; j <fstYLength ; j++) {
+                    for (int k = 0; k <sndXLength ; k++) {
+//                        int itemFirst = fst[i][j];
+//                        int itemSecond = snd[i][j];
+                        //mul[i][j] = itemFirst*itemSecond;
+//                        logInfo("fst("+i+":"+j+") "+fst[i][j]+" snd("+i+":"+j+") "+snd[i][j]);
+//                        logInfo("mul("+i+":"+j+") "+mul[i][j]);
+                        logInfo("("+i+":"+j+":"+k+")");
+                        //C[i][j] = A[i][0]*B[0][j]
+                        counter++;
+
+                    }
+                }
             }
+            logInfo(Arrays.deepToString(mul));
+            return  mul;
         }
-        return  mul;
+
     }
 
     public static void main(String[] args) {
         int[][] a = {{10}};
         int[][] b = {{100}};
         int[][] c = MatrixUtils.mul(a, b);
+        int[][] a1 = {{1,2},{3,4}};
+        int[][] b1 = {{5,6},{7,8}};
+        int[][] c1 = MatrixUtils.mul(a1, b1);
     }
 }
