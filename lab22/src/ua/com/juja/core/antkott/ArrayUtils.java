@@ -1,9 +1,5 @@
 package ua.com.juja.core.antkott;
 
-import java.util.Arrays;
-
-import static ua.com.juja.core.antkott.utils.Logging.logInfo;
-
 public class ArrayUtils {
 
 /*
