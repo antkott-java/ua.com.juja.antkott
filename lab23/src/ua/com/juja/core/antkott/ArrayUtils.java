@@ -23,42 +23,37 @@ public class ArrayUtils {
 
 
     public int[][][] rotateClockwise(int[][][] arg) {
-        if (null == arg) {
+        if (arg == null) {
             return null;
         }
-        for (int[][] item:arg
-             ) {
-            if (item==null){
+        int argXLength = arg.length;
+        if (argXLength == 0) {
+            return null;
+        }
+        for (int[][] itemX : arg
+                ) {
+            if (itemX == null || itemX.length != argXLength) {
                 return null;
             }
+            for (int[] itemY : itemX
+                    ) {
+                if (itemY == null || itemY.length != argXLength) {
+                    return null;
+                }
+            }
         }
-
-       /* int[][][] ints = new int[0][][];
-        int[][][] ints1 = new int[1][0][];
-        //System.out.println(Arrays.deepToString(arg));
-        if (Arrays.equals(arg,ints1)||Arrays.equals(arg,ints)||arg[0] == null|| arg[0][0] == null) {
-            return null;
-        }*/
-        int argXLength = arg.length;
         int argYLength = arg[0].length;
-        int argZLength = arg[0][0].length;
-        if (argXLength == 0||argYLength==0||argZLength==0) {
+        if (argYLength == 0) {
             return null;
         }
-        if (argXLength != argYLength || argYLength!=argZLength) {
+        int argZLength = arg[0][0].length;
+        if (argZLength == 0) {
+            return null;
+        }
+        if (argXLength != argYLength || argYLength != argZLength) {
             return null;
         }
         if (argXLength == 1) return arg;
-        for (int argX = 0; argX < argXLength; argX++) {
-            for (int argY = 0; argY < argYLength; argY++) {
-
-                    int[] internalArray = arg[argX][argY];
-                    if (internalArray == null) {
-                        return null;
-                    }
-
-            }
-        }
         int[][][] returnArray = new int[argXLength][argYLength][argZLength];
         for (int argX = 0; argX < argXLength; argX++) {
             for (int argY = 0; argY < argYLength; argY++) {
