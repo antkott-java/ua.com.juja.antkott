@@ -1,5 +1,7 @@
 package ua.com.juja.core.antkott;
 
+import java.util.Arrays;
+
 public class ArrayUtils {
 
 /*
@@ -24,9 +26,19 @@ public class ArrayUtils {
         if (null == arg) {
             return null;
         }
-        if (arg[0] == null|| arg[0][0] == null) {
-            return null;
+        for (int[][] item:arg
+             ) {
+            if (item==null){
+                return null;
+            }
         }
+
+       /* int[][][] ints = new int[0][][];
+        int[][][] ints1 = new int[1][0][];
+        //System.out.println(Arrays.deepToString(arg));
+        if (Arrays.equals(arg,ints1)||Arrays.equals(arg,ints)||arg[0] == null|| arg[0][0] == null) {
+            return null;
+        }*/
         int argXLength = arg.length;
         int argYLength = arg[0].length;
         int argZLength = arg[0][0].length;
@@ -39,20 +51,26 @@ public class ArrayUtils {
         if (argXLength == 1) return arg;
         for (int argX = 0; argX < argXLength; argX++) {
             for (int argY = 0; argY < argYLength; argY++) {
-                int[][] internalArray = arg[argX];
-                if (internalArray == null) {
-                    return null;
-                }
-                if (internalArray.length != argXLength) {
-                    return null;
-                }
+
+                    int[] internalArray = arg[argX][argY];
+                    if (internalArray == null) {
+                        return null;
+                    }
+
             }
         }
         int[][][] returnArray = new int[argXLength][argYLength][argZLength];
         for (int argX = 0; argX < argXLength; argX++) {
             for (int argY = 0; argY < argYLength; argY++) {
-                int[] argItem = arg[argXLength - argY - 1][argX];
-                returnArray[argX][argY] = argItem;
+                for (int argZ = 0; argZ < argZLength; argZ++) {
+                    int tempX = argZ;
+                    int tempY = argX;
+                    int tempZ = argY;
+                    //System.out.print(" XYZ = " + argX + argY + argZ);
+                    //System.out.println(" tempXYZ = " + tempX + tempY + tempZ);
+                    int argItem = arg[tempX][tempY][tempZ];
+                    returnArray[argX][argY][argZ] = argItem;
+                }
             }
         }
         return returnArray;
