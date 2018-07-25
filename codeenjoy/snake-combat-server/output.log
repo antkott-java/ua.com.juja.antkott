@@ -1,0 +1,70 @@
+2018-07-25 22:10:27.627:INFO:oejs.Server:jetty-8.1.7.v20120910
+2018-07-25 22:10:27.648:INFO:oejdp.ScanningAppProvider:Deployment monitor D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\webapps at interval 1
+2018-07-25 22:10:27.654:INFO:oejd.DeploymentManager:Deployable added: D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\webapps\root.war
+2018-07-25 22:10:27.674:INFO:oejw.WebInfConfiguration:Extract jar:file:/D:/ANT/_JavaApp/Juja/ua.com.juja.core.antkott/ua.com.juja.antkott/codeenjoy/snake-combat-server/webapps/root.war!/ to D:\PRG\SYS\TMP\jetty-0.0.0.0-8080-root.war-_-any-\webapp
+2018-07-25 22:10:29.538:INFO:root:No Spring WebApplicationInitializer types detected on classpath
+2018-07-25 22:10:29.766:INFO:oejsh.ContextHandler:started o.e.j.w.WebAppContext{/,file:/D:/PRG/SYS/TMP/jetty-0.0.0.0-8080-root.war-_-any-/webapp/},D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\webapps\root.war
+2018-07-25 22:10:29.766:INFO:oejsh.ContextHandler:started o.e.j.w.WebAppContext{/,file:/D:/PRG/SYS/TMP/jetty-0.0.0.0-8080-root.war-_-any-/webapp/},D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\webapps\root.war
+2018-07-25 22:10:29.766:INFO:oejsh.ContextHandler:started o.e.j.w.WebAppContext{/,file:/D:/PRG/SYS/TMP/jetty-0.0.0.0-8080-root.war-_-any-/webapp/},D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\webapps\root.war
+2018-07-25 22:10:29.779:INFO:root:Initializing Spring root WebApplicationContext
+èþë. 25, 2018 10:10:29 ÏÏ org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+èþë. 25, 2018 10:10:29 ÏÏ org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Wed Jul 25 22:10:29 CEST 2018]; root of context hierarchy
+èþë. 25, 2018 10:10:29 ÏÏ org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [com/globallogic/snake/applicationContext.xml]
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider registerDefaultFilters
+INFO: JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22686ddb: defining beans [timerService,screenControllerServlet,artifactGenerator,playerController,restSenderExecutorService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,playerService,restScreenSender,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 970 ms
+2018-07-25 22:10:30.770:INFO:oejsh.ContextHandler:started o.e.j.w.WebAppContext{/,file:/D:/PRG/SYS/TMP/jetty-0.0.0.0-8080-root.war-_-any-/webapp/},D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\webapps\root.war
+2018-07-25 22:10:30.813:INFO:root:Initializing Spring FrameworkServlet 'appServlet'
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.FrameworkServlet initServletBean
+INFO: FrameworkServlet 'appServlet': initialization started
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Jul 25 22:10:30 CEST 2018]; parent: Root WebApplicationContext
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/servlet-context.xml]
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider registerDefaultFilters
+INFO: JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7eefaca0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,adminController,boardController,mainPageController,registrationController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.view.InternalResourceViewResolver#0,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@22686ddb
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/admin31415],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.AdminController.getAdminPage(org.springframework.ui.Model)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/admin31415],methods=[GET],params=[resume],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.AdminController.resumeGame(org.springframework.ui.Model)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/admin31415],methods=[GET],params=[pause],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.AdminController.pauseGame(org.springframework.ui.Model)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/help],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.BoardController.help()
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/board/{playerName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.BoardController.board(org.springframework.ui.ModelMap,java.lang.String)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/board],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.BoardController.boardAll(org.springframework.ui.ModelMap)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/leaderboard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.BoardController.leaderBoard(org.springframework.ui.ModelMap)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.MainPageController.getMainPage(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/register],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.RegistrationController.submitRegistrationForm(com.globallogic.snake.services.Player,org.springframework.validation.BindingResult)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/register],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.RegistrationController.openRegistrationForm(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+èþë. 25, 2018 10:10:30 ÏÏ org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/register],methods=[GET],params=[remove_me],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.globallogic.snake.web.controller.RegistrationController.removeUserFromGame(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+èþë. 25, 2018 10:10:31 ÏÏ org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+INFO: Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+èþë. 25, 2018 10:10:31 ÏÏ org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+INFO: Mapped URL path [/favicon.ico] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+èþë. 25, 2018 10:10:31 ÏÏ org.springframework.web.servlet.FrameworkServlet initServletBean
+INFO: FrameworkServlet 'appServlet': initialization completed in 422 ms
+2018-07-25 22:10:31.237:INFO:oejdp.ScanningAppProvider:Deployment monitor D:\ANT\_JavaApp\Juja\ua.com.juja.core.antkott\ua.com.juja.antkott\codeenjoy\snake-combat-server\contexts at interval 1
+2018-07-25 22:10:31.257:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:8080
+èþë. 25, 2018 11:47:44 ÏÏ org.springframework.web.servlet.DispatcherServlet noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/codenjoy-contest/ws] in DispatcherServlet with name 'appServlet'
+èþë. 25, 2018 11:50:46 ÏÏ org.springframework.web.servlet.DispatcherServlet noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/codenjoy-contest/ws] in DispatcherServlet with name 'appServlet'
+èþë. 25, 2018 11:56:19 ÏÏ org.springframework.web.servlet.DispatcherServlet noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/codenjoy-contest/ws] in DispatcherServlet with name 'appServlet'
+^C

@@ -1,0 +1,3 @@
+https://github.com/codenjoyme/codenjoy-game
+https://github.com/codenjoyme/codenjoy
+https://github.com/codenjoyme/codenjoy-builder/blob/master/README.md
