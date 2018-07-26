@@ -9,8 +9,5 @@
         <module name="snake-engine" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="snake-engine" target="10" />
-    </bytecodeTargetLevel>
   </component>
 </project>

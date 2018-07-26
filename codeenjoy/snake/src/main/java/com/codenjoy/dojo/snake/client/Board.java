@@ -1,19 +1,36 @@
 package com.codenjoy.dojo.snake.client;
 
+/*-
+ * #%L
+ * Codenjoy - it's a dojo-like platform from developers to developers.
+ * %%
+ * Copyright (C) 2016 Codenjoy
+ * %%
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/gpl-3.0.html>.
+ * #L%
+ */
+
+
 import com.codenjoy.dojo.client.AbstractBoard;
-import com.codenjoy.dojo.client.Direction;
+import com.codenjoy.dojo.services.Direction;
 import com.codenjoy.dojo.services.Point;
-import com.codenjoy.dojo.services.PointImpl;
 import com.codenjoy.dojo.snake.model.Elements;
 
+import java.util.Arrays;
 import java.util.List;
 
-
-/**
- * User: oleksandr.baglai
- * Date: 10/2/12
- * Time: 12:07 AM
- */
 public class Board extends AbstractBoard<Elements> {
 
     @Override
@@ -25,8 +42,16 @@ public class Board extends AbstractBoard<Elements> {
         return get(Elements.GOOD_APPLE);
     }
 
+    @Override
+    protected int inversionY(int y) {
+        return size - 1 - y;
+    }
+
     public Direction getSnakeDirection() {
         Point head = getHead();
+        if (head == null) {
+            return null;
+        }
         if (isAt(head.getX(), head.getY(), Elements.HEAD_LEFT)) {
             return Direction.LEFT;
         } else if (isAt(head.getX(), head.getY(), Elements.HEAD_RIGHT)) {
@@ -44,7 +69,11 @@ public class Board extends AbstractBoard<Elements> {
                 Elements.HEAD_DOWN,
                 Elements.HEAD_LEFT,
                 Elements.HEAD_RIGHT);
-        return result.get(0);
+        if (result.isEmpty()) {
+            return null;
+        } else {
+            return result.get(0);
+        }
     }
 
     public List<Point> getBarriers() {
@@ -55,6 +84,10 @@ public class Board extends AbstractBoard<Elements> {
     }
 
     public List<Point> getSnake() {
+        Point head = getHead();
+        if (head == null) {
+            return Arrays.asList();
+        }
         List<Point> result = get(
                 Elements.TAIL_END_DOWN,
                 Elements.TAIL_END_LEFT,
@@ -66,8 +99,12 @@ public class Board extends AbstractBoard<Elements> {
                 Elements.TAIL_LEFT_UP,
                 Elements.TAIL_RIGHT_DOWN,
                 Elements.TAIL_RIGHT_UP);
-        result.add(0, getHead());
+        result.add(0, head);
         return result;
+    }
+
+    public boolean isGameOver() {
+        return getHead() == null;
     }
 
     @Override
@@ -92,34 +129,5 @@ public class Board extends AbstractBoard<Elements> {
 
     public List<Point> getWalls() {
         return get(Elements.BREAK);
-    }
-
-    public Point getSnakeHead() {
-        for (int x = 0; x < size; x++) {
-            for (int y = 0; y < size; y++) {
-                char ch = field[x][y];
-                if (ch == Elements.HEAD_DOWN.ch() ||
-                        ch == Elements.HEAD_UP.ch() ||
-                        ch == Elements.HEAD_LEFT.ch() ||
-                        ch == Elements.HEAD_RIGHT.ch())
-                {
-                    return new PointImpl(x, y);
-                }
-            }
-        }
-        return null; // TODO NPE
-    }
-
-    public boolean isTailOn(Point from, Direction direction) {
-        List<Point> snake = getSnake();
-        Point point = direction.change(from);
-        return snake.contains(point);
-    }
-
-    // TODO remove copy-past
-    public boolean isStoneOn(Point from, Direction direction) {
-        List<Point> snake = getStones();
-        Point point = direction.change(from);
-        return snake.contains(point);
     }
 }
