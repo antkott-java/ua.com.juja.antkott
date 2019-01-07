@@ -26,6 +26,7 @@ package com.codenjoy.dojo.snake.client;
 import com.codenjoy.dojo.client.AbstractBoard;
 import com.codenjoy.dojo.services.Direction;
 import com.codenjoy.dojo.services.Point;
+import com.codenjoy.dojo.services.PointImpl;
 import com.codenjoy.dojo.snake.model.Elements;
 
 import java.util.Arrays;
@@ -130,4 +131,20 @@ public class Board extends AbstractBoard<Elements> {
     public List<Point> getWalls() {
         return get(Elements.BREAK);
     }
+
+    public Point getSnakeHead() {
+        for (int x = 0; x < size; x++)
+            for (int y = 0; y < size; y++) {
+                char ch = field[x][y];
+                char ch = 's';
+                if (ch == Elements.HEAD_DOWN.ch() ||
+                        ch == Elements.HEAD_UP.ch() ||
+                        ch == Elements.HEAD_LEFT.ch() ||
+                        ch == Elements.HEAD_RIGHT.ch()) {
+                    return new PointImpl(x, y);
+                }
+            }
+        return null; // TODO NPE
+    }
+
 }

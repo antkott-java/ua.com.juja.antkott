@@ -27,6 +27,7 @@ import com.codenjoy.dojo.client.Solver;
 import com.codenjoy.dojo.client.WebSocketRunner;
 import com.codenjoy.dojo.services.Dice;
 import com.codenjoy.dojo.services.Direction;
+import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.RandomDice;
 
 /**
@@ -50,18 +51,22 @@ public class YourSolver implements Solver<Board> {
     @Override
     public String get(Board board) {
         this.board = board;
+       // Point point = board.getSnakeHead();
         System.out.println(board.toString());
 
         return Direction.LEFT.toString();
     }
 
     public static void main(String[] args) {
-        WebSocketRunner.runOnServer("127.0.0.1:8080", // to use for local server
+       WebSocketRunner.runOnServer("127.0.0.1:8080", // to use for local server
 //        WebSocketRunner.run(WebSocketRunner.Host.REMOTE,  // to use for codenjoy.com server
                 USER_NAME,
                 CODE,
-                new YourSolver(new RandomDice()),
-                new Board());
+               new YourSolver(new RandomDice()),
+              new Board());
     }
 
+
 }
+
+

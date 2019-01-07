@@ -1,3 +1,8 @@
 https://github.com/codenjoyme/codenjoy-game
 https://github.com/codenjoyme/codenjoy
 https://github.com/codenjoyme/codenjoy-builder/blob/master/README.md
+
+
+http://127.0.0.1:8080/codenjoy-contest/board/player/antkott@email.com?code=19498640701614783155
+
+c:\_ANT\REPO\java\codenjoy\codenjoy\CodingDojo\builder\start-server.bat
